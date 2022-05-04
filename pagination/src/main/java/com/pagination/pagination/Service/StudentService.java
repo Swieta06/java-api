@@ -14,5 +14,5 @@ public interface StudentService {
 
     List<StudentDto> getStudentPagination(int pageNo, int pageSize);
 
-    StudentDto upload(Integer id, MultipartFile file) throws IOException;
+   // StudentDto upload(Integer id, MultipartFile file) throws IOException;
 }

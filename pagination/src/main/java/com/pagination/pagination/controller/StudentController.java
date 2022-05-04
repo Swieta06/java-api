@@ -40,10 +40,10 @@ public class StudentController {
     public List<StudentDto> getAllStudentPagination(@RequestParam int pageNo,@RequestParam int pageSize){
         return this.studentService.getStudentPagination(pageNo,pageSize);
     }
-    @PostMapping("/uploadImage")
+   /* @PostMapping("/uploadImage")
     public ResponseEntity<StudentDto>uploadImage(@RequestParam Integer id, @RequestParam("Image")MultipartFile file)throws IOException {
        StudentDto studentDtoUpload= this.studentService.upload(id,file);
        return  new ResponseEntity<>(studentDtoUpload, HttpStatus.OK);
-    }
+    }*/
 
 }

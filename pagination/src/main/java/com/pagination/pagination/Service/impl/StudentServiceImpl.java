@@ -54,7 +54,7 @@ public class StudentServiceImpl implements StudentService {
         return studentList;
     }
 
-    @Override
+   /* @Override
     public StudentDto upload(Integer id, MultipartFile file) throws IOException {
         Optional<Student>studentOptional=studentRepository.findById(id.longValue());
         if (studentOptional.isPresent()) {
@@ -70,7 +70,7 @@ public class StudentServiceImpl implements StudentService {
 
         }
         return null;
-    }
+    }*/
 
 
 }
