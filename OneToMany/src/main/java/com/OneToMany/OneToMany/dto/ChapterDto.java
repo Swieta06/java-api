@@ -7,8 +7,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+
 public class ChapterDto {
 
     private Long id;
@@ -17,4 +17,7 @@ public class ChapterDto {
     private BookDto book;
     private Boolean isDeleted;
 
+    public ChapterDto(String name) {
+        this.name = name;
+    }
 }

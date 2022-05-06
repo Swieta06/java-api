@@ -12,7 +12,6 @@ import java.util.List;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "book")
@@ -32,13 +31,19 @@ public class Book {
     private String author;
 
     @Column(name = "year")
-    private LocalDate year;
-
+    private String year;
+    //buat connect model dari parent(mapped by child)
     @OneToMany(mappedBy = "book",cascade = CascadeType.PERSIST)
     private List<Chapter>ChapterList;
 
     @Column(name = "is_deleted")
     private Boolean isDeleted;
 
-
+    public Book(Long id, String title, String author, String year, Boolean isDeleted) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.isDeleted = isDeleted;
+    }
 }

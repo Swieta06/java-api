@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "chapter")
 public class Chapter {
@@ -37,4 +36,9 @@ public class Chapter {
     @Column(name = "is_deleted")
     private Boolean isDeleted;
 
+
+
+    public Chapter(String name) {
+        this.name = name;
+    }
 }

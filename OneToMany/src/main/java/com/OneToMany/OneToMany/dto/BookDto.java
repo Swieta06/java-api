@@ -10,16 +10,22 @@ import java.util.List;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class BookDto {
 
     private Long id;
     private String title;
     private String author;
-    private LocalDate year;
+    private String year;
     private List<ChapterDto> ChapterDtoList;
     private Boolean isDeleted;
 
 
+    public BookDto(Long id, String title, String author, String year, Boolean isDeleted) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.isDeleted = isDeleted;
+    }
 }

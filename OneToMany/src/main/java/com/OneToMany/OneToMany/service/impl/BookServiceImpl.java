@@ -58,4 +58,12 @@ public class BookServiceImpl implements BookService {
 
         return bookDtoInserted;
     }
+
+    @Override
+    public List<Book> getAllBooks() {
+        return this.bookRepository.findAll();
+    }
+
+
+
 }
