@@ -1,11 +1,13 @@
 package com.OneToMany.OneToMany.service.impl;
 
+import com.OneToMany.OneToMany.dto.BookChapterResponse;
 import com.OneToMany.OneToMany.dto.BookDto;
 import com.OneToMany.OneToMany.dto.ChapterDto;
 import com.OneToMany.OneToMany.model.Book;
 import com.OneToMany.OneToMany.model.Chapter;
 import com.OneToMany.OneToMany.repository.BookRepository;
 import com.OneToMany.OneToMany.service.BookService;
+import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,6 +66,10 @@ public class BookServiceImpl implements BookService {
         return this.bookRepository.findAll();
     }
 
+    @Override
+    public List<BookChapterResponse> getBookChapter() {
+        return this.bookRepository.getBookChapter();
+    }
 
 
 }

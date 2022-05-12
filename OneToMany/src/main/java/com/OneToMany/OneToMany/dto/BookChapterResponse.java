@@ -5,17 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChapterDto {
-
-    private Long id;
-    private String name;
+@Getter
+@Setter
+public class BookChapterResponse {
+    private String author;
+    private String title;
+    private String year;
     private String content;
-    private BookDto book;
-    private Boolean isDeleted;
-
-
+    private String name;
 }

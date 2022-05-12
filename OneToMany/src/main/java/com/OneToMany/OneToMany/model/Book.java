@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "book")
 public class Book {
@@ -39,11 +40,5 @@ public class Book {
     @Column(name = "is_deleted")
     private Boolean isDeleted;
 
-    public Book(Long id, String title, String author, String year, Boolean isDeleted) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-        this.year = year;
-        this.isDeleted = isDeleted;
-    }
+
 }

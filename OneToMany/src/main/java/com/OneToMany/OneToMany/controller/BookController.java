@@ -1,5 +1,6 @@
 package com.OneToMany.OneToMany.controller;
 
+import com.OneToMany.OneToMany.dto.BookChapterResponse;
 import com.OneToMany.OneToMany.dto.BookDto;
 import com.OneToMany.OneToMany.model.Book;
 import com.OneToMany.OneToMany.repository.BookRepository;
@@ -31,10 +32,10 @@ public class BookController {
         List<Book>getBooks=bookService.getAllBooks();
         return getBooks;
     }
-    @GetMapping("/search")
-    public ResponseEntity<List<BookDto>>allBook(){
-        return ResponseEntity.ok(bookRepository.getBook());
+
+    @GetMapping("/getBookChapter")
+    public ResponseEntity<BookChapterResponse>getBookChapter(){
+     List<BookChapterResponse> bookChapterResponseList= this.bookService.getBookChapter();
+        return  new ResponseEntity(bookChapterResponseList,HttpStatus.OK);
     }
-
-
 }

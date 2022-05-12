@@ -11,6 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class BookDto {
 
     private Long id;
@@ -21,11 +22,4 @@ public class BookDto {
     private Boolean isDeleted;
 
 
-    public BookDto(Long id, String title, String author, String year, Boolean isDeleted) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-        this.year = year;
-        this.isDeleted = isDeleted;
-    }
 }

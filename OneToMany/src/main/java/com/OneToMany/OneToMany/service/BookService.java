@@ -1,5 +1,6 @@
 package com.OneToMany.OneToMany.service;
 
+import com.OneToMany.OneToMany.dto.BookChapterResponse;
 import com.OneToMany.OneToMany.dto.BookDto;
 import com.OneToMany.OneToMany.model.Book;
 
@@ -10,4 +11,5 @@ public interface BookService {
 
     List<Book> getAllBooks();
 
+    public List<BookChapterResponse> getBookChapter();
 }
