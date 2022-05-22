@@ -1,5 +1,4 @@
-package com.ManyToMany.ManyToMany.model;
-
+package model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,20 +8,24 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
-@Getter
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "course")
-public class Course {
+@Table(name = "student")
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "name")
     private String name;
+    @Column(name = "gpa")
+    private Double gpa;
+    @Column(name = "address")
+    private String address;
 
-    @OneToMany(mappedBy = "course",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "student",cascade = CascadeType.PERSIST)
     private List<CourseRating>courseRatingList;
 
 }
