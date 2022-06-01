@@ -1,0 +1,8 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÓøÎÚ
+B
+java:S1172",Remove this unused method parameter "order".(½¾Íå
+Y
+java:S1854">Remove this useless assignment to local variable "stringList".(Õíçüÿÿÿÿ
+J
+java:S1481"/Remove this unused "stringList" local variable.(Õíçüÿÿÿÿ

@@ -1,0 +1,9 @@
+
+`	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(αλΑ¦ψÿÿÿÿ
+`	java:S112U"FDefine and throw a dedicated exception instead of using a generic one.(Θ…‹μωÿÿÿÿ
+Z
+java:S2583/"DChange this condition so that it does not always evaluate to "false"(Ò‹Ω
+Y
+java:S1155S">Use isEmpty() to check whether the collection is empty or not.( φ¥ώÿÿÿÿ
+S	java:S106l"9Replace this use of System.out or System.err by a logger.(κτΎύÿÿÿÿ
+S	java:S106p"9Replace this use of System.out or System.err by a logger.(κτΎύÿÿÿÿ
