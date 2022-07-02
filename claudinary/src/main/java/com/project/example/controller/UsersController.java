@@ -19,8 +19,11 @@ public class UsersController {
 
     @PostMapping("/controller")
     public String getImage(@RequestParam("data") String data, @RequestParam(value = "file", required = false) MultipartFile file){
+
         try {
-            System.out.println(imporFile.getName());
+           //
+            //
+            // System.out.println(imporFile.getName());
         Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
                 "cloud_name", "dggqgo3rw",
                 "api_key", "466689723189921",
