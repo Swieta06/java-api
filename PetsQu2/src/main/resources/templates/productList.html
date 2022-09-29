@@ -1,0 +1,55 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List Products</title>
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdn.datatables.net/v/bs4/jq-3.6.0/dt-1.12.1/datatables.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+
+<body>
+<div th:replace="~{partials/navigation :: navigation}"></div>
+<div class="container">
+
+    <h3>List Products PetsQu</h3>
+    <hr/>
+    <a th:href="@{/api/product/addProductForm}" class="btn mb-3" style="background-color:#a2836e;color:#ffff">Add Product</a>
+    <table class="table table-bordered table-striped" id="productTable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product: ${productList}">
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.category}"></td>
+            <td th:text="${product.price}"></td>
+            <td>
+                <a th:href="@{/api/product/updateProductForm(productId=${product.id})}" class="btn mb-3" style="background-color:#d9ad7c;color:#ffff">Update</a>
+                <a th:href="@{/api/product/deleteProduct(productId=${product.id})}" class="btn mb-3 " style="background-color:#a2836e;color:#ffff" onclick="return confirm('Are you sure to delete?')">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.6.0/dt-1.12.1/datatables.min.js"></script>
+<script>
+            $(document).ready(function() {
+                $("#productTable").DataTable({
+                    'aoColumnDefs': [{
+                        'bSortable': false,
+                        'aTargets': [-1]
+                    }]
+                });
+            })
+        </script>
+</body>
+</html>
